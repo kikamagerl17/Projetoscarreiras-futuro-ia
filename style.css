@@ -1,0 +1,388 @@
+/* --- RESET E ESTILOS GLOBAIS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background: linear-gradient(-100deg, #23032E, #6B238E, #A186E8);
+  background-size: 400% 400%;
+  animation-name: moveGradient;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+/* --- ESTRUTURA E LAYOUT PRINCIPAL --- */
+main,
+header,
+footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+/* --- TIPOGRAFIA --- */
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+p,
+li {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8ad2;
+}
+
+/* --- ANIMAÇÃO DO BACKGROUND --- */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+nav a {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+/* --- COMPONENTES GERAIS --- */
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gif-container img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+
+blockquote {
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 2rem;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -2px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-saiba-mais {
+  background-color: #6f42c1;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-saiba-mais:hover {
+  background-color: #5a359a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+
+/* --- SEÇÃO DE CARDS --- */
+.cards-profissoes-destaque {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+  padding: 0 1rem;
+}
+
+.card-profissao {
+  background-color: #fff;
+  border-radius: 40px 40px 10px 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-profissao img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-profissao h4 {
+  color: #6711a4;
+  margin-top: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0;
+  border-radius: 0;
+}
+
+.card .intro-p {
+  background: linear-gradient(to right, #6f42c1, #a186e8);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.card h3 {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h4 {
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.card p,
+.card li {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.card .content-limiter {
+  flex: 1;
+  max-width: 100%;
+}
+
+.img-profissao {
+  flex-shrink: 0;
+  width: 45%;
+  height: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+/* --- SEÇÃO IMPACTO --- */
+#impacto {
+  text-align: center;
+}
+
+/* --- FORMULÁRIO DE CONTATO --- */
+#contato form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contato label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#contato input,
+#contato textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+#contato button {
+  background-color: #a168ff;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#contato button:hover {
+  background-color: #ff8ad2;
+}
+
+/* --- RODAPÉ --- */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(221, 221, 221, 0.5);
+  color: #e0e0e0;
+}
+
+/* --- ANIMAÇÕES DE SCROLL (JAVASCRIPT) --- */
+.card,
+blockquote,
+.cards-profissoes-destaque,
+#impacto p,
+form {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.card.visible,
+blockquote.visible,
+.cards-profissoes-destaque.visible,
+#impacto p.visible,
+form.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- AJUSTES DE RESPONSIVIDADE (MEDIA QUERIES) --- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  section {
+    padding: 2rem 0;
+  }
+  
+  blockquote {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    letter-spacing: -1px;
+  }
+  
+  .cards-profissoes-destaque {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  
+  .cards {
+    gap: 3rem;
+  }
+  
+  .card {
+    flex-direction: column;
+  }
+  
+  .card .content-limiter {
+    max-width: 100%;
+  }
+  
+  .card h3 {
+    font-size: 2rem;
+  }
+  
+  .img-profissao {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  nav ul {
+    margin-top: 0;
+    gap: 1.5rem;
+  }
+}
